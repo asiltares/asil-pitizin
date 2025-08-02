@@ -1,0 +1,8 @@
+local QBCore = exports['qb-core']:GetCoreObject()
+RegisterCommand("pitizin", function(source, args, rawCommand)
+    local player = PlayerPedId()
+    local rastgeleSure = math.random(300000, 600000) -- 5 dakika (300000 ms) ve 10 dakika (600000 ms)
+    QBCore.Functions.Notify("Dispatch izni bekleniyor, lütfen sabırlı olun...")
+    Citizen.Wait(rastgeleSure)
+    QBCore.Functions.Notify("Dispatch üzerinden ram ve pit izni verildi")
+end, false)
